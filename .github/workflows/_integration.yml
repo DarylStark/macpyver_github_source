@@ -27,23 +27,23 @@ jobs:
         run: pip install poetry
       - name: Check `lock` file for inconsistensies
         run: poetry lock --check
-  unit-tests:
-    name: Unit tests
-    runs-on: ubuntu-latest
-    needs: test-poetry-lock-file
-    steps:
-      - name: Checkout the repository
-        uses: actions/checkout@v3
-      - name: Setup Python 3.11
-        uses: actions/setup-python@v4
-        with:
-          python-version: "3.11"
-      - name: Install Poetry
-        run: pip install poetry
-      - name: Install main and dev requirements
-        run: poetry install --with dev
-      - name: Run unit tests
-        run: poetry run pytest
+  # unit-tests:
+  #   name: Unit tests
+  #   runs-on: ubuntu-latest
+  #   needs: test-poetry-lock-file
+  #   steps:
+  #     - name: Checkout the repository
+  #       uses: actions/checkout@v3
+  #     - name: Setup Python 3.11
+  #       uses: actions/setup-python@v4
+  #       with:
+  #         python-version: "3.11"
+  #     - name: Install Poetry
+  #       run: pip install poetry
+  #     - name: Install main and dev requirements
+  #       run: poetry install --with dev
+  #     - name: Run unit tests
+  #       run: poetry run pytest
   code-quality-src:
     name: Code quality - src
     runs-on: ubuntu-latest

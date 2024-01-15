@@ -20,6 +20,7 @@ class GitHubReleasesSource(VersionSource):
     to work, the `github_repository` attribute of the given `software` object
     has to be set.
     """
+
     # pylint: disable=too-few-public-methods
 
     def _convert_github_release_to_version(
@@ -83,6 +84,7 @@ class GitHubTagsSource(VersionSource):
     work, the `github_repository` attribute of the given `software` object has
     to be set.
     """
+
     # pylint: disable=too-few-public-methods
 
     def _convert_github_tag_to_version(

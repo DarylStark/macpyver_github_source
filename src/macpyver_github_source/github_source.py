@@ -13,7 +13,6 @@ from macpyver_core.version_source import VersionSource
 from .exceptions import GitHubInvalidRepoException
 
 
-
 class GitHubReleasesSource(VersionSource):
     """Class to retrieve version from GitHub releases.
 
@@ -54,8 +53,10 @@ class GitHubReleasesSource(VersionSource):
 
         Returns:
             A list with Version objects for the specific software.
-        """
 
+        Raises:
+            GitHubInvalidRepoException: when the given repository is invalid.
+        """
         repo = self.software.extra_information.get('github_repository', None)
         if not isinstance(repo, str):
             raise GitHubInvalidRepoException('Invalid repository given')
@@ -109,8 +110,10 @@ class GitHubTagsSource(VersionSource):
 
         Returns:
             A list with Version objects for the specific software.
-        """
 
+        Raises:
+            GitHubInvalidRepoException: when the given repository is invalid.
+        """
         repo = self.software.extra_information.get('github_repository', None)
         if not isinstance(repo, str):
             raise GitHubInvalidRepoException('Invalid repository given')

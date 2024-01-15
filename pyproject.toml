@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "macpyver_github_source"
-version = "0.0.0"
+version = "1.0.0-dev"
 description = "Version Source for GitHub support for MacPyVer"
 authors = ["Daryl Stark <daryl@dstark.nl>"]
 license = "MIT"
@@ -42,7 +42,7 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.bumpver]
-current_version = "0.0.0"
+current_version = "1.0.0-dev"
 version_pattern = "MAJOR.MINOR.PATCH[-TAG]"
 commit_message = "Version {new_version}"
 commit = true

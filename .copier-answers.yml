@@ -1,0 +1,17 @@
+# Changes here will be overwritten by Copier
+_commit: 07dfeed
+_src_path: https://github.com/DarylStark/copier_templates.git
+devcontainer: true
+github_workflow: true
+license: MIT
+package_name: macpyver_cisco_source
+project_description: 'Version Source for GitHub support for MacPyVer.
+
+    '
+project_description_short: 'Version Source for GitHub support for MacPyVer.
+
+    '
+project_name: macpyver-github-source
+pypi_package_description: Version Source for GitHub support for MacPyVer
+pypi_package_name: macpyver_cisco_source
+sphinx_docs: true
